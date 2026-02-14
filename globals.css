@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ferrari-black: #0f0f0f;
+  --color-rosso-corsa: #E10600;
+  --color-bright-gold: #FFD700;
+  --color-carbon-gray: #1e1e1e;
+  --color-glass-white: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+
+  --font-heading: var(--font-orbitron);
+  --font-body: var(--font-rajdhani);
+}
+
+/* ── Base ─────────────────────────────────────────── */
+
+body {
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #E10600;
+  color: #ffffff;
+}
+
+/* ── Scrollbar (Webkit) ───────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E10600;
+  border-radius: 3px;
+}
+
+/* ── HUD Utilities ────────────────────────────────── */
+
+.hud-border {
+  border: 1px solid rgba(225, 6, 0, 0.3);
+  box-shadow:
+    0 0 15px rgba(225, 6, 0, 0.08),
+    inset 0 0 15px rgba(225, 6, 0, 0.03);
+}
+
+.hud-glow-gold {
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.15),
+    0 0 40px rgba(255, 215, 0, 0.05);
+}
+
+.text-glow-red {
+  text-shadow:
+    0 0 20px rgba(225, 6, 0, 0.4),
+    0 0 60px rgba(225, 6, 0, 0.15);
+}
+
+.text-glow-gold {
+  text-shadow:
+    0 0 20px rgba(255, 215, 0, 0.4),
+    0 0 60px rgba(255, 215, 0, 0.15);
+}
+
+.glass {
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
